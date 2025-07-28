@@ -1,0 +1,30 @@
+LANGKAH BUAT SHORTCUT ANYDESK KE STARTUP:
+>> Cari File AnyDesk
+Buka File Explorer
+Arahkan ke lokasi AnyDesk, biasanya:
+java
+SalinEdit
+C:\Program Files (x86)\AnyDesk\AnyDesk.exe
+atau kalau kamu belum install, mungkin di:
+makefile
+SalinEdit
+C:\Users\NamaKamu\Downloads\AnyDesk.exe
+Kalau bingung, kamu bisa klik kanan icon AnyDesk di desktop atau Start Menu → Open file location.
+
+>> Buat Shortcut
+Klik kanan pada AnyDesk.exe → pilih Create shortcut
+Akan muncul file AnyDesk - Shortcut.lnk
+
+>> Buka Folder Startup
+Tekan tombol Windows + R → ketik:
+shell:startup
+Tekan Enter → terbuka folder:
+	Copy shortcut disini
+SalinEdit
+C:\Users\NamaKamu\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+>> Pindahkan Shortcut ke Folder Startup
+Drag atau copy file AnyDesk - Shortcut.lnk
+Paste ke folder Startup yang tadi terbuka.
+
+===============================================
