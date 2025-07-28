@@ -1,0 +1,20 @@
+Print sharing error WINDOWS 10
+
+>> Registry Editor:
+Tekan Win + R, ketik regedit, tekan Enter.
+Reg edit
+SalinEdit
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Print
+
+>> Tambahkan nilai baru:
+Klik kanan di panel kanan → New → DWORD (32-bit) Value
+Beri nama: RpcAuthnLevelPrivacyEnabled
+Klik dua kali → ubah Value data menjadi 0
+Klik OK.
+
+>> Restart komputer atau jalankan perintah berikut di Command Prompt (admin):
+gpedit.msc
+net stop spooler
+net start spooler
+ 
+Test ip sharing server  
