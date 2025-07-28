@@ -1,0 +1,47 @@
+Mematikan Windows Update Permanen di Windows 10 (Termasuk Medic Service)
+
+1. Disable Windows Update Service
+    >>Tekan Windows + R, ketik services.msc, tekan Enter.
+    >>Cari Windows Update di daftar.
+    >>Klik kanan → Properties.
+    >>Pada bagian Startup type, pilih Disabled.
+    >>Klik tombol Stop kalau service sedang berjalan.
+    >>Klik Apply lalu OK.
+
+2. Disable Windows Update Medic Service via Registry
+    >>Tekan Windows + R, ketik regedit, tekan Enter.
+    >>Arahkan ke:
+    >>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WaaSMedicSvc
+
+    >>Klik folder WaaSMedicSvc.
+    >>Di panel kanan, cari Start (tipe DWORD).
+    >>Klik dua kali pada Start, ubah nilainya jadi 4 (4 = Disabled).
+    >>Klik OK dan tutup Registry Editor.
+    >>Restart komputer.
+
+3. Disable Update Otomatis Lewat Group Policy Editor (Windows 10 Pro/Enterprise)
+    >>Tekan Windows + R, ketik gpedit.msc, tekan Enter.
+    >>Buka:
+    >>Computer Configuration > Administrative Templates > Windows Components > Windows Update
+
+    >>Configure Automatic Updates → klik dua kali.
+    >>Pilih Disabled → klik Apply dan OK.
+
+4. Disable Scheduled Tasks yang Berhubungan dengan Windows Update
+    >>Tekan Windows + R, ketik taskschd.msc, tekan Enter.
+
+    >>Navigasi ke:
+    >>Task Scheduler Library > Microsoft > Windows > WindowsUpdate
+    >>Klik kanan pada task apa pun di folder itu → pilih Disable.
+
+    >>Juga cek folder UpdateOrchestrator, disable semua task terkait update.
+
+5. (Opsional) Pakai Tools Windows Update Blocker
+    >>Download dan jalankan aplikasi ini:
+    >>Windows Update Blocker
+    >>Pilih Disable Windows Update → klik Apply Now.
+    >>Selesai!
+    
+========================================================
+
+
